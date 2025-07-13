@@ -15,7 +15,7 @@ export default function HomePage() {
     >
       <div className="bg-black p-8 rounded-xl w-full max-w-md">
           <div className="flex justify-center mb-4 ">         
-            <p className="text-white font-extrabold text-6xl">CalAudit</p>
+            <p className="text-white font-semibold text-6xl">CalAudit</p>
           </div>
           <p className="flex justify-center items-center dark:text-gray-500 text-black text-xl">Comprehensive Audit logging for Cal.com</p>  
         <div className="flex flex-col gap-4 mt-6">
