@@ -2,6 +2,7 @@
 import { CircleCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 
 
 export default function HomePage() {
@@ -23,7 +24,9 @@ export default function HomePage() {
             <CircleCheck className="w-5 h-5 text-white fill-black mr-2"/>
             Continue with Cal.com
           </button>
-          <button className="bg-gray-900 dark:text-white px-4 py-3 rounded-md shadow flex flex-row items-center justify-center font-medium cursor-pointer">
+          <button className="bg-gray-900 dark:text-white px-4 py-3 rounded-md shadow flex flex-row items-center justify-center font-medium cursor-pointer"
+          onClick={() => signIn("google", {callbackUrl: "/dashboard"})}
+          >
             <Image
               className="mr-2"
               src="/google.svg"
@@ -37,17 +40,16 @@ export default function HomePage() {
 
         {/* remember me div */}
         <div className="flex justify-center items-center dark: text-gray-500 mt-5">          
-            <input type="checkbox" />
+            <input type="checkbox" id="remember"/>
             <label className="ml-1" htmlFor="remember">Remember me on this device</label>
         </div>
 
         {/* Signup for cal div */}
         <div className="flex justify-center items-center dark: text-gray-500 mt-5">
           <p className="text-sm mr-2">Don’t have an account?</p>
-          <Link href="https://app.cal.com/signup" className="text-sm text-white">Signup for Cal.com</Link>
+          <Link href="https://app.cal.com/signup" target="blank" className="text-sm text-white">Signup for Cal.com</Link>
         </div>
       </div>      
-
     </main>
   );
 }
