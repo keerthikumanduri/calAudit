@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import  localFont from "next/font/local"
+import { Providers } from "./providers";
 
 const calSans = localFont({
   src: "./fonts/CalSans.ttf"
@@ -21,7 +22,9 @@ export default function RootLayout({
       <body
         className={`${calSans.className}antialiased`}
       >
+      <Providers>
         {children}
+      </Providers>
       </body>
     </html>
   );

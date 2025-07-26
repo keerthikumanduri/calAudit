@@ -1,6 +1,7 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "../lib/auth";
 import { redirect } from "next/navigation";
+import { Navbar } from "../components/Navbar";
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions);
@@ -10,8 +11,8 @@ export default async function Dashboard() {
   }
 
   return (
-    <main className="h-screen flex justify-center items-center">
-      <h1 className="text-4xl text-black">Welcome, {session.user?.name}!</h1>
+    <main className="">
+      <Navbar/>
     </main>
   );
 }
