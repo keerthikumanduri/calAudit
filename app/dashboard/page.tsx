@@ -3,6 +3,7 @@ import { authOptions } from "../lib/auth";
 import { redirect } from "next/navigation";
 import { Navbar } from "../components/Navbar";
 
+
 export default async function Dashboard() {
   const session = await getServerSession(authOptions);
 
@@ -11,7 +12,13 @@ export default async function Dashboard() {
   }
 
   return (
-    <main className="">
+    <main className="h-screen"
+      style={{
+        backgroundImage: "url('/dark.webp')",
+        backgroundRepeat: "repeat",
+        backgroundSize: "cover",
+      }}
+    >
       <Navbar/>
     </main>
   );

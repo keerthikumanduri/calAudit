@@ -1,9 +1,9 @@
-// components/Navbar.tsx
 "use client";
 
 import { useSession, signOut } from "next-auth/react";
 import { ChevronDown, LogOut, Building2 } from "lucide-react";
 import { DropdownMenu,DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import Image from "next/image";
 
 export function Navbar() {
   const { data: session } = useSession();
@@ -17,10 +17,13 @@ export function Navbar() {
     <nav className="">
       {/* left app name */}
       <div className="bg-black px-15 py-3 flex items-center justify-between">
-        <div>
-          <span className="text-white font-bold text-xl pr-1">Cal.com</span>
-          <span className="text-white">|</span>
-          <span className="text-white font-bold text-xl pl-1">Audit</span>
+        <div className="relative h-15 w-20">
+          <Image
+            src="/lightLogo-nobg.png"
+            alt="logo"
+            fill
+            className="object-contain scale-255"
+          />
         </div>
 
         {/* dropdown */}
@@ -34,7 +37,7 @@ export function Navbar() {
           </div>
 
         {/* profile details */}
-          <div className="ml-5 mr-5 w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center">
+          <div className="ml-5 mr-2 w-9 h-9 rounded-full bg-gray-800 border-1 border-gray-700 flex items-center justify-center">
             {userName
               .split(" ")
               .map((initial) => initial[0])
