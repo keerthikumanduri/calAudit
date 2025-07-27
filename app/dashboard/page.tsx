@@ -2,6 +2,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../lib/auth";
 import { redirect } from "next/navigation";
 import { Navbar } from "../components/Navbar";
+import { Filter } from "../components/Filter";
 
 
 export default async function Dashboard() {
@@ -20,6 +21,7 @@ export default async function Dashboard() {
       }}
     >
       <Navbar/>
+      <Filter/>
     </main>
   );
 }

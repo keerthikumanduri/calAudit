@@ -28,7 +28,7 @@ export function Navbar() {
 
         {/* dropdown */}
         <div className="flex text-white items-center">
-          <div className="border-1 border-gray-700 bg-gray-800 px-3 py-2 mr-2 rounded flex items-center cursor-pointer">
+          <div className="border-1 border-gray-700 bg-zinc-800 px-3 py-2 mr-2 rounded flex items-center cursor-pointer">
             <Building2 size={20} className="mr-2"/>
             <DropdownMenu>
               <DropdownMenuTrigger>{teamName}</DropdownMenuTrigger>
@@ -37,7 +37,7 @@ export function Navbar() {
           </div>
 
         {/* profile details */}
-          <div className="ml-5 mr-2 w-9 h-9 rounded-full bg-gray-800 border-1 border-gray-700 flex items-center justify-center">
+          <div className="ml-5 mr-2 w-9 h-9 rounded-full bg-zinc-800 border-1 border-gray-700 flex items-center justify-center">
             {userName
               .split(" ")
               .map((initial) => initial[0])
