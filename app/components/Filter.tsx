@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Funnel, ChevronDown, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
+const menuItemClass = "hover:bg-zinc-700 cursor-pointer rounded-sm";
 
 export function Filter() {
   return (
@@ -27,6 +28,7 @@ export function Filter() {
 
       {/* Filter Inputs */}
       <div className="grid grid-cols-3 gap-4">
+        
         {/* Event Type Dropdown */}
         <div className="relative">
           <DropdownMenu>
@@ -35,15 +37,15 @@ export function Filter() {
               <ChevronDown size={15} className="ml-2 text-white" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-zinc-800 text-white border border-zinc-700">
-              <DropdownMenuItem>All Events</DropdownMenuItem>
-              <DropdownMenuItem>Booking Created</DropdownMenuItem>
-              <DropdownMenuItem>Booking Cancelled</DropdownMenuItem>
-              <DropdownMenuItem>Booking Rescheduled</DropdownMenuItem>
-              <DropdownMenuItem>User Updated</DropdownMenuItem>
-              <DropdownMenuItem>Team Member Added</DropdownMenuItem>
-              <DropdownMenuItem>Event Type Created</DropdownMenuItem>
-              <DropdownMenuItem>Integration Connected</DropdownMenuItem>
-              <DropdownMenuItem>Webhook Configured</DropdownMenuItem>
+              <DropdownMenuItem  className={menuItemClass}>All Events</DropdownMenuItem>
+              <DropdownMenuItem  className={menuItemClass}>Booking Created</DropdownMenuItem>
+              <DropdownMenuItem  className={menuItemClass}>Booking Cancelled</DropdownMenuItem>
+              <DropdownMenuItem  className={menuItemClass}>Booking Rescheduled</DropdownMenuItem>
+              <DropdownMenuItem  className={menuItemClass}>User Updated</DropdownMenuItem>
+              <DropdownMenuItem  className={menuItemClass}>Team Member Added</DropdownMenuItem>
+              <DropdownMenuItem  className={menuItemClass}>Event Type Created</DropdownMenuItem>
+              <DropdownMenuItem  className={menuItemClass}>Integration Connected</DropdownMenuItem>
+              <DropdownMenuItem  className={menuItemClass}>Webhook Configured</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -56,11 +58,10 @@ export function Filter() {
               <ChevronDown size={15} className="ml-2 text-white" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-zinc-800 text-white border border-zinc-700">
-              <DropdownMenuItem>Today</DropdownMenuItem>
-              <DropdownMenuItem>Last 7 days</DropdownMenuItem>
-              <DropdownMenuItem>Last 30 days</DropdownMenuItem>
-              <DropdownMenuItem>This Month</DropdownMenuItem>
-              <DropdownMenuItem>Custom Range</DropdownMenuItem>
+              <DropdownMenuItem className={menuItemClass}>Today</DropdownMenuItem>
+              <DropdownMenuItem className={menuItemClass}>Last 7 days</DropdownMenuItem>
+              <DropdownMenuItem className={menuItemClass}>Last 30 days</DropdownMenuItem>
+              <DropdownMenuItem className={menuItemClass}>This Month</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
